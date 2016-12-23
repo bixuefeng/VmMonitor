@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+<!DOCTYPE mapper    
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.vm.mapper.UserMapper">
+	    <resultMap id="user" type="com.vm.domain.User">
+		 	<result property="id" column="id" javaType="int"/>
+		 	<result property="userName" column="user_name" javaType="String"/>
+		 	<result property="password" column="pass_word" javaType="String"/>
+		 	<result property="phone" column="phone" javaType="String"/>
+		 	<result property="email" column="email" javaType="String"/>
+		 	<result property="vmUuid" column="vm_uuid" javaType="String"/>
+		 	<result property="state" column="state" javaType="String"/>
+		 	<result property="ctime" column="ctime" javaType="int"/>
+		 	<result property="utime" column="utime" javaType="int"/>
+		 	<result property="valid" column="valid" javaType="int"/>
+	 	</resultMap>
+	 	<delete id="deleteByName" parameterType="string">
+	 		delete from user where user_name=#{userName}
+	 	</delete>
+	 	<select id="getUserByName" parameterType="string" resultType="com.vm.mapper.UserMapper">
+	 	select * from user where user_name=#{userName} and valid=1
+	 	</select>
+	 	<update id="update" parameterType="com.vm.mapper.UserMapper">
+	 	 update user set user_name=#{userName} 
+	 	</update>
+ 	</mapper>
+ 	
+ 	
