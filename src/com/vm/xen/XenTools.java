@@ -1167,7 +1167,7 @@ public final class XenTools {
 		Connection conn = null;
 		try{
 			Set<Host> hosts =Host.getAll(conn);
-			
+			return null;
 		}catch (Exception e) {
 			System.err.println("XenTools.hostSelectStrategy µ÷ÓÃ³ö´í  e=" + e.getMessage());
 			return null;
