@@ -7,8 +7,10 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.vm.domain.User;
 import com.vm.resource.AllServerResource;
 import com.vm.resource.ServerResource;
+import com.vm.service.UserService;
 import com.vm.service.XenService;
 import com.vm.xen.XenTools;
 

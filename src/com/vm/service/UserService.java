@@ -86,4 +86,16 @@ public class UserService {
 		}
 		userMapper.update(user);
 	}
+	
+	/**
+	 * 根据用户名，获取user
+	 * @param userName
+	 * @return
+	 */
+	public User getUserByName(String userName){
+		if(StringUtils.isEmpty(userName)){
+			return null;
+		}
+		return userMapper.getUserByName(userName);
+	}
 }

@@ -72,6 +72,8 @@ public class VmInfo {
 	public void setOs(String os) {
 		this.os = os;
 	}
+	
+	
 	public String getLastTime() {
 		return lastTime;
 	}

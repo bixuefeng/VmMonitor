@@ -18,10 +18,10 @@
 	 	<delete id="deleteByName" parameterType="string">
 	 		delete from user where user_name=#{userName}
 	 	</delete>
-	 	<select id="getUserByName" parameterType="string" resultType="com.vm.mapper.UserMapper">
+	 	<select id="getUserByName" parameterType="string" resultType="com.vm.domain.User">
 	 	select * from user where user_name=#{userName} and valid=1
 	 	</select>
-	 	<update id="update" parameterType="com.vm.mapper.UserMapper">
+	 	<update id="update" parameterType="com.vm.domain.User">
 	 	 update user set user_name=#{userName} 
 	 	</update>
  	</mapper>

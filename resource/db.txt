@@ -1,0 +1,16 @@
+CREATE TABLE `user` (
+`id`  int NOT NULL AUTO_INCREMENT ,
+`user_name`  varchar(11) NOT NULL ,
+`pass_word`  varchar(255) NOT NULL ,
+`phone`  varchar(255) NULL ,
+`email`  varchar(255) NOT NULL ,
+`vm_uuid`  int NULL ,
+`state`  varchar(255) NULL ,
+`ctime`  int NOT NULL ,
+`utime`  int NOT NULL ,
+`valid`  int NOT NULL ,
+PRIMARY KEY (`id`),
+UNIQUE INDEX `user_name` (`user_name`) 
+)
+DEFAULT CHARACTER SET=utf8mb4
+;

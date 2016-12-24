@@ -4,21 +4,21 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     <mapper namespace="com.vm.mapper.VmInfoMapper">
 	    <resultMap id="user" type="com.vm.domain.VmInfo">
-		 	<result property="id" column="id"/>
-		 	<result property="uuid" column="uuid"/>
-		 	<result property="name" column="name"/>
-		 	<result property="os" column="os"/>
-		 	<result property="lastTime" column="last_time"/>
-		 	<result property="memory" column="memory"/>
-		 	<result property="cpu" column="cpu"/>
-		 	<result property="vmIp" column="vm_ip"/>
-		 	<result property="state" column="state"/>
-		 	<result property="vifs" column="vifs"/>
-		 	<result property="vbds" column="vbds"/>
-		 	<result property="location" column="location"/>
-		 	<result property="ctime" column="ctime"/>
-		 	<result property="utime" column="utime"/>
-		 	<result property="valid" column="valid" />
+		 	<result property="id" column="id" javaType="int"/>
+		 	<result property="uuid" column="uuid" javaType="String"/>
+		 	<result property="name" column="name" javaType="String"/>
+		 	<result property="os" column="os" javaType="String"/>
+		 	<result property="lastTime" column="last_time" javaType="int"/>
+		 	<result property="memory" column="memory" javaType="String"/>
+		 	<result property="cpu" column="cpu" javaType="String"/>
+		 	<result property="vmIp" column="vm_ip" javaType="String"/>
+		 	<result property="state" column="state" javaType="String"/>
+		 	<result property="vifs" column="vifs" javaType="int"/>
+		 	<result property="vbds" column="vbds" javaType="int"/>
+		 	<result property="location" column="location" javaType="int"/>
+		 	<result property="ctime" column="ctime" javaType="int"/>
+		 	<result property="utime" column="utime" javaType="int"/>
+		 	<result property="valid" column="valid" javaType="int"/>
 	 	</resultMap>
 	 	<select id="getVmInfoByUuid" parameterType="string" resultType="com.vm.mapper.VmInfoMapper">
 	 		select * from vminfo where uuid=#{uuid} and valid=1

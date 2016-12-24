@@ -10,6 +10,7 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
+import com.vm.sql.EncoderByMd5;
 import com.vm.xen.ConnectionUtil;
 import com.vm.xen.XenTools;
 import com.xensource.xenapi.Connection;
@@ -111,5 +112,11 @@ vm+actual6996090880
 			String value = entry.getValue();
 			System.out.println("key = "+ key+" value="+value);
 		}
+	}
+	
+	@Test
+	public void testMd5() throws Exception{
+		String s = EncoderByMd5.Encoder("123456");
+		System.out.println(s);
 	}
 }
